@@ -282,15 +282,15 @@ function getPoolHost() {
 
 // Return transaction URL
 function getTransactionUrl(id, stats) {
-    if (stats && blockExplorers){
-        return blockExplorers[stats.config.coin].transactionExplorer.replace('{symbol}', stats.config.symbol.toLowerCase()).replace('{id}', id);
+    if (stats){
+        return transactionExplorer.replace('{id}', id);
     }
 }
 
 // Return blockchain explorer URL
 function getBlockchainUrl(id, stats) {
-    if (stats && blockExplorers){
-        return blockExplorers[stats.config.coin].blockchainExplorer.replace('{symbol}', stats.config.symbol.toLowerCase()).replace('{id}', id);
+    if (stats){
+        return blockchainExplorer.replace('{id}', id);
     }
 }
 
