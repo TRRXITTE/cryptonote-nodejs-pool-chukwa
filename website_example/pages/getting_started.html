@@ -132,7 +132,58 @@
             </tr>
             </thead>
             <tbody id="miningApps_rows">
-	    
+	    <!-- TRRXITTEminer -->
+        <tr class="appInfo">
+            <td class="miningAppTitle">TRRXITTEminer</td>
+            <td>NVIDIA GPU & CPU</td>
+            <td>easy to use Mining Software</td>
+            <td><a class="btn btn-success" target="_blank" href="https://github.com/trrxitte/miner/releases/latest"><span data-tkey="download">Download</span></a></td>
+            <td><a class="btn btn-default" role="button" data-toggle="collapse" href="#xmrig" aria-expanded="true" aria-controls="collapseExample"><span data-tkey="showConfig">See more</span></a></td>
+        </tr>
+        <tr class="appConfig">
+            <td colspan="5">
+                <div class="collapse" id="xmrig">
+    
+<pre><code>
+    {
+        "hardwareConfiguration": {
+            "cpu": {
+                "enabled": true,
+                "optimizationMethod": "Auto",
+                "threadCount": 12
+            },
+            "nvidia": {
+                "devices": [
+                    {
+                        "desktopLag": 100.0,
+                        "enabled": true,
+                        "id": 0,
+                        "intensity": 100.0,
+                        "name": "NVIDIA Geforce GTX 1080 Ti"
+                    }
+                ]
+            }
+        },
+        "pools": [
+            {
+                "agent": "",
+                "algorithm": "chukwa",
+                "host": "<span class="exampleHost">POOL_HOST</span>",
+                "niceHash": false,
+                "password": "<span class="examplePassword">YOUR_WORKER_NAME</span>",
+                "port": <span class="examplePort">PORT</span>,
+                "priority": 0,
+                "rigID": "",
+                "ssl": false,
+                "username": "<span class="exampleLogin">YOUR_WALLET_ADDRESS</span>"
+            }
+        ]
+    }
+],</code></pre>
+
+                </div>
+            </td>
+        </tr>
 	    <!-- XMR Stak -->
             <tr class="appInfo">
                 <td class="miningAppTitle">XMR Stak</td>
