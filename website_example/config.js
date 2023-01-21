@@ -13,5 +13,5 @@ var blockchainExplorer = "https://interface.traaittcash.com/block.html?hash={id}
 var transactionExplorer = "https://interface.traaittcash.com/transaction.html?hash={id}";
 //var transactionExplorerMerged = "http://explorer.ird.cash/?hash={id}#transaction";
 
-var themeCss = "themes/default.css";
+var themeCss = "themes/custom.css";
 var defaultLang = 'en';
