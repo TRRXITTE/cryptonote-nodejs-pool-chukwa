@@ -1194,7 +1194,7 @@ function payments_InitTemplate(xhrGetPayments, ranOnce) {
         updateText(`paymentsTotalPaid${coin}`, lastStats.pool.totalMinersPaid.toString());
         updateText(`paymentsInterval${coin}`, getReadableTime(lastStats.config.paymentsInterval));
         updateText(`paymentsMinimum${coin}`, getReadableCoin(lastStats, lastStats.config.minPaymentThreshold));
-        updateText(`paymentsDenomination${coin}`, getReadableCoin(lastStats, lastStats.config.denominationUnit, 3));
+        updateText(`paymentsDenomination${coin}`, getReadableCoin(lastStats, lastStats.config.denominationUnit, 8));
         payments_renderPayments(lastStats.pool.payments, lastStats);
 
         Object.keys(mergedStats).forEach(key => {
@@ -1217,7 +1217,7 @@ function payments_InitTemplate(xhrGetPayments, ranOnce) {
           updateText(`paymentsTotalPaid${key}`, mergedStats[key].pool.totalMinersPaid.toString());
           updateText(`paymentsInterval${key}`, getReadableTime(mergedStats[key].config.paymentsInterval));
           updateText(`paymentsMinimum${key}`, getReadableCoin(mergedStats[key], mergedStats[key].config.minPaymentThreshold));
-          updateText(`paymentsDenomination${key}`, getReadableCoin(mergedStats[key], mergedStats[key].config.denominationUnit, 3));
+          updateText(`paymentsDenomination${key}`, getReadableCoin(mergedStats[key], mergedStats[key].config.denominationUnit, 8));
           payments_renderPayments(mergedStats[key].pool.payments, mergedStats[key]);
         })
         sortElementList($(`#blocksTabs`), $(`#blocksTabs>li`), mergedStats)
